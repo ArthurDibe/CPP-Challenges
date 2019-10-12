@@ -3,4 +3,4 @@
 
 1. Students of C++
 1. Idea seekers for their own C++ solutions
-1. You want to contribute with your experience to comment some alternative solution to some code example that you may have found interesting 
+1. Professionals that want to share alternatives code solutions for some file(s) found in this repo.
