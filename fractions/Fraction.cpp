@@ -1,14 +1,15 @@
-/********************************
+/* *******************************
 AUTHOR: Dibe
-FILE:	Fraction.h
+FILE:	Fraction.cpp
 
 ABOUT THIS CODE:
-	Fraction class that holds the
-	information for a single fraction
-	and defines the set of admissible
-	operations on a Fraction object.
+	This module implements the
+	functions declared in the Fraction.h.
+	In here you will find functions and
+	overloaded operators that helps 
+	to deal with objects of Fraction type.
 
-********************************/
+******************************* */
 
 #include <iostream>
 #include "Fraction.h"

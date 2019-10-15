@@ -1,14 +1,14 @@
-/********************************
+/* *******************************
 AUTHOR: Dibe
 FILE:	Fraction.h
 
 ABOUT THIS CODE:
-	Fraction class that holds the
-	information for a single fraction
-	and defines the set of admissible
+	This header contains the Fraction class 
+	that holds the information for a single
+	fraction and defines the set of admissible
 	operations on a Fraction object.
 
-********************************/
+******************************* */
 
 #ifndef SICT_FRACTION_H
 #define SICT_FRACTION_H
