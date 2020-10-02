@@ -1,4 +1,4 @@
-*v3.cpp
-*v4.cpp
-*.txt
-.retrieve_records*
+/retrieve_record_fields/*v3.cpp
+/retrieve_record_fields/*v4.cpp
+/retrieve_record_fields/*.txt
+/retrieve_record_fields/.retrieve_records*
