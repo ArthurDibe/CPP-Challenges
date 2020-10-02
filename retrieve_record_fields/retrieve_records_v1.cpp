@@ -113,7 +113,7 @@ void retrieveInfo(std::string& local_str, std::string& m_reservID, std::string& 
 int stringToInt(std::string liczba)
 {
 	int res = 0;
-	for (int i = 0; i < liczba.length(); i++)
+	for (size_t i = 0; i < liczba.length(); i++)
 		res += (liczba[i] - 48)*pow(10, liczba.length() - 1 - i);
 	return res;
 }
