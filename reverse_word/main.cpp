@@ -4,6 +4,7 @@
 
 void swap(std::string::iterator front, std::string::iterator back);
 void getWord(std::string &str, std::string &word, std::size_t &foundPosition);
+void reverseWord(std::string &word);
 std::string reverse_strings(std::string str);
 
 int main()
@@ -49,4 +50,16 @@ void getWord(std::string &str, std::string &word, std::size_t &foundPosition)
     foundPosition = str.find_first_of(' ');
     word = str.substr(initialPosition, foundPosition); // save the word before single space found
     str.erase(initialPosition, foundPosition + 1);     // erase the word saved + single space
+}
+
+// reverse one word
+void reverseWord(std::string &word)
+{
+    auto back_it = word.end();
+    for (auto front_it = word.begin(); front_it != back_it; ++front_it)
+    {
+        if (front_it != back_it - 1)
+            swap(front_it, --back_it); // swap characters if they are not the same position in the word
+    }
+    word += ' '; // add single space after the word
 }
