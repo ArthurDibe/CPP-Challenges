@@ -40,3 +40,13 @@ void swap(std::string::iterator front, std::string::iterator back)
     *front = *back;
     *back = tmp;
 }
+
+// find a word in the string sentence
+void getWord(std::string &str, std::string &word, std::size_t &foundPosition)
+{
+    const std::size_t initialPosition = 0;
+
+    foundPosition = str.find_first_of(' ');
+    word = str.substr(initialPosition, foundPosition); // save the word before single space found
+    str.erase(initialPosition, foundPosition + 1);     // erase the word saved + single space
+}
