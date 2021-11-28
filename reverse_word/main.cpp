@@ -33,3 +33,10 @@ int main()
     return 0;
 }
 
+// Swap two characters
+void swap(std::string::iterator front, std::string::iterator back)
+{
+    char tmp = *front;
+    *front = *back;
+    *back = tmp;
+}
