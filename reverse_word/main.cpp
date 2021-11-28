@@ -34,7 +34,7 @@ int main()
     return 0;
 }
 
-// Swap two characters
+// Swap two characters of a word
 void swap(std::string::iterator front, std::string::iterator back)
 {
     char tmp = *front;
