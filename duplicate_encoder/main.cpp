@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <cctype>
 
 void tester(std::vector<std::string> &, std::vector<std::string> &);
 std::string duplicate_encoder(const std::string &word);
@@ -20,8 +21,28 @@ int main()
 
 std::string duplicate_encoder(const std::string &word)
 {
+    std::string result = "";
+    std::string str_copy = word;
 
-    return "";
+    // replace uppercase characters to lowercase
+    std::for_each(str_copy.begin(), str_copy.end(), [](char &c)
+    {
+        if (isupper(c))
+            c = std::tolower(c);
+    });
+
+    // encode the characters of the string
+    std::for_each(str_copy.cbegin(), str_copy.cend(),[&str_copy, &result](char c)
+    {
+        unsigned int curr_count = std::count(str_copy.cbegin(), str_copy.cend(), c);
+
+        if (curr_count > 1)
+            result += ')';
+        else
+            result += '(';
+    });
+
+    return result;
 }
 
 void tester(std::vector<std::string> &original, std::vector<std::string> &resultExpected)
@@ -38,11 +59,13 @@ void tester(std::vector<std::string> &original, std::vector<std::string> &result
         }
         else
         {
-            std::cout << "[ " << testNumber << " - FAILED ]: \nExpected=> \"" << *it_expected << "\"\nResulted=> \"" << result << "\"" << std::endl << std::endl;
+            std::cout << "[ " << testNumber << " - FAILED ]: " << *it_original << std::endl;
+            std::cout << "Expected=> \"" << *it_expected << "\"" << std::endl;
+            std::cout << "Resulted=> \"" << result << "\"" << std::endl
+                      << std::endl;
         }
 
         ++testNumber;
         ++it_expected;
-        
     }
 }
