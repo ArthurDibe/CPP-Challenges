@@ -38,10 +38,11 @@ void tester(std::vector<std::string> &original, std::vector<std::string> &result
         }
         else
         {
-            std::cout << "[ " << testNumber << " - FAILED ]: \nExpected=> \"" << *it_expected << "\"\nResulted=> \"" << result << "\"" << std::endl;
+            std::cout << "[ " << testNumber << " - FAILED ]: \nExpected=> \"" << *it_expected << "\"\nResulted=> \"" << result << "\"" << std::endl << std::endl;
         }
 
         ++testNumber;
         ++it_expected;
+        
     }
 }
