@@ -63,3 +63,20 @@ void reverseWord(std::string &word)
     }
     word += ' '; // add single space after the word
 }
+
+std::string reverse_strings(std::string str)
+{
+    std::string word, result = "";
+    std::size_t foundPosition = 0;
+
+    while (foundPosition != std::string::npos)
+    {
+        getWord(str, word, foundPosition);
+        reverseWord(word);
+        result += word; // add the reversed word into the string
+    }
+
+    result.erase(result.length() - 1, 1); // erase a single space from the end of the string
+
+    return result;
+}
